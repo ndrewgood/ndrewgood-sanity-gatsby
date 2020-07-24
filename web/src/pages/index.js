@@ -1,15 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import {
-  mapEdgesToNodes,
-  filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture
-} from '../lib/helpers'
-import Container from '../components/container'
-import GraphQLErrorList from '../components/graphql-error-list'
-import ProjectPreviewGrid from '../components/project-preview-grid'
-import SEO from '../components/seo'
-import Layout from '../containers/layout'
+
 
 export const query = graphql`
   query IndexPageQuery {
@@ -64,18 +55,11 @@ const IndexPage = props => {
 
   if (errors) {
     return (
-      <Layout>
-        <GraphQLErrorList errors={errors} />
-      </Layout>
+    <h1>{errors}</h1>
     )
   }
 
   const site = (data || {}).site
-  const projectNodes = (data || {}).projects
-    ? mapEdgesToNodes(data.projects)
-      .filter(filterOutDocsWithoutSlugs)
-      .filter(filterOutDocsPublishedInTheFuture)
-    : []
 
   if (!site) {
     throw new Error(
@@ -84,19 +68,7 @@ const IndexPage = props => {
   }
 
   return (
-    <Layout>
-      <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <Container>
-        <h1>Welcome to {site.title}</h1>
-        {projectNodes && (
-          <ProjectPreviewGrid
-            title='Latest projects'
-            nodes={projectNodes}
-            browseMoreHref='/archive/'
-          />
-        )}
-      </Container>
-    </Layout>
+    <p>test</p>
   )
 }
 
