@@ -12,6 +12,13 @@ module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/layouts/index.js`),
+      },
+    },
     {
       resolve: 'gatsby-source-sanity',
       options: {

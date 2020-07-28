@@ -1,5 +1,7 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
+import {Helmet} from 'react-helmet'
+
 
 
 export const query = graphql`
@@ -68,7 +70,11 @@ const IndexPage = props => {
   }
 
   return (
-    <p>test</p>
+    <div>
+      <Helmet title={site.title}></Helmet>
+      <p>{site.title}</p>
+      <Link to="/page-2">link to new page</Link>
+    </div>
   )
 }
 
