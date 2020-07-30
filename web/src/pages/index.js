@@ -25,6 +25,7 @@ const IndexPage = props => {
 
   const site = (data || {}).site
 
+
   return (
     <div>
       <Helmet title={site.title} />

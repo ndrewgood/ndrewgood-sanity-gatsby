@@ -1,13 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import '../styles/nav.scss' 
-
-
-let at = document.getElementById("at");
-let nh = document.getElementById("nh");
-let nb = document.getElementById("nb");
-
-
 
 
 
@@ -21,23 +14,24 @@ const nav = () => {
       }
     }
   `)
-
   const site = (data || {}).site
+
+  const [show, setShow] = useState(true);
 
   return(
   <nav id="n" role="navigation">
     <Link to="/"><p>{ site.title }</p></Link>
     <div id="ni-c">
-      <Link className="ni" id="at" ><div>@</div></Link>
+      <Link className="ni" onClick={() => setShow(!show)} ><div>@</div></Link>
       <Link className="ni" ><div>W</div></Link>
       <Link className="ni" ><div>P</div></Link>
       <Link className="ni" ><div>A</div></Link>
       <Link className="ni" ><div>R</div></Link>
     </div>
-    <div id="nh">
+    <div id="nh" className={show ? null : "hide" }>
       <p>{ site.description }</p>
     </div>
-    <div id="nb"></div>
+    <div id="nb" className={show ? null : "hide" }></div>
   </nav>
   )
 }

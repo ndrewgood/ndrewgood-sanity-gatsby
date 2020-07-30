@@ -1,9 +1,16 @@
-$p-color: black;
-$s-color: white;
-$border: 2px solid black;
+$p-color: white;
+$s-color: black;
+$border: 2px solid white;
+$border-none: 0px solid white !important;
+$animation-length: .5s;
 
 
 #n {
+    mix-blend-mode: exclusion !important;
+    position: fixed;
+    transform: translateX(-50%);
+    left: 50%;
+
     border: $border;
     width: 280px;
     display: block;
@@ -25,6 +32,8 @@ $border: 2px solid black;
     margin: auto;
 }
 
+
+
 #ni-c {
     display: flex;
     :first-child {
@@ -37,6 +46,7 @@ $border: 2px solid black;
     height: 56px;
     border-top: $border;
     border-left: $border;
+    border-bottom: $border;
     position: relative;
     display: flex;
     font-size: 24px;
@@ -61,7 +71,7 @@ $border: 2px solid black;
 
 #nh {
     height: 150px;
-    border-top: $border;
+
     p {
         margin-top: 5px;
         font-size: 16px;
@@ -73,6 +83,21 @@ $border: 2px solid black;
     border-top: $border;
 }
 
+#nh, #nb {
+    transition: $animation-length;
+    // p {
+    //     transition: $animation-length;
+    // }
+}
+
+
+
 .hide {
-    display: none;
+    mix-blend-mode: exclusion !important;
+    height: 0px !important;
+    border: $border-none;
+    margin-top: -3.5px;
+    p {
+        opacity: 0;
+    }
 }
