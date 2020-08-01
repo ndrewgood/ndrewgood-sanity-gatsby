@@ -16,22 +16,15 @@ const nav = () => {
   `)
   const site = (data || {}).site
 
-  const [show, setShow] = useState(true);
-
   return(
   <nav id="n" role="navigation">
-    <Link to="/"><p>{ site.title }</p></Link>
-    <div id="ni-c">
-      <Link className="ni" onClick={() => setShow(!show)} ><div>@</div></Link>
-      <Link className="ni" ><div>W</div></Link>
-      <Link className="ni" ><div>P</div></Link>
-      <Link className="ni" ><div>A</div></Link>
-      <Link className="ni" ><div>R</div></Link>
-    </div>
-    <div id="nh" className={show ? null : "hide" }>
-      <p>{ site.description }</p>
-    </div>
-    <div id="nb" className={show ? null : "hide" }></div>
+    <div className="space"></div>
+      <ul>
+        <li>Work</li>
+        <li>Play</li>
+        <li>About</li>
+        <li>Resume</li>
+      </ul>
   </nav>
   )
 }

@@ -1,6 +1,9 @@
 import React from 'react'
 import {graphql, Link} from 'gatsby'
 import {Helmet} from 'react-helmet'
+import Hero from '../components/hero'
+import Project from '../components/project'
+
 
 
 
@@ -29,8 +32,8 @@ const IndexPage = props => {
   return (
     <div>
       <Helmet title={site.title} />
-      <p>{site.title}</p>
-      <Link to="/page-2">link to new page</Link>
+      <Hero />
+      <Project />
     </div>
   )
 }
