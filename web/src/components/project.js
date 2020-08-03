@@ -4,24 +4,22 @@ import '../styles/project.scss'
 
 
 
-const hero = () => {
-  const data = useStaticQuery(graphql`
-    query projectQuery {
-      site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
-        title
-        description
-        keywords
-      }
-    }
-  `)
-  const site = (data || {}).site
+const hero = (props) => {
+
+  const pStyle = {
+    'backgroundColor': props.node.color
+  }
+
+  const ptcStyle = {
+    'color': props.node.color
+  }
 
   return(
-    <div className="p">
+    <div id={props.key} className="p" style={pStyle}>
       <div className="p-t">
-        <div className="p-tc">
-          <h1>Project Name</h1>
-          <h2>Type of Project</h2>
+        <div className="p-tc" style={ptcStyle}>
+          <h1>{props.node.title}</h1>
+          <h2>{props.node.type}</h2>
         </div>
       </div>
       <div className="p-i"></div>

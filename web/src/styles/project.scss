@@ -3,7 +3,6 @@
     // width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color: #F3C05F;
     position: relative;
 }
 
@@ -16,7 +15,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    background-color: white;
+    background-color: grey;
 }
 
 .p-t {
@@ -28,10 +27,9 @@
 }
 
 .p-tc {
-    color: #F3C05F;
     z-index: 90;
     position: sticky;
-    top: 41vh;
+    top: 46vh;
     max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
@@ -43,8 +41,8 @@
     justify-content: center;
     text-align: center;
     h1, h2 {
-        margin-block-start: 0.2em;
-        margin-block-end: 0.2em;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
     }
     h2 {
         font-weight: normal;

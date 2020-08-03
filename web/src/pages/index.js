@@ -14,6 +14,17 @@ export const query = graphql`
       description
       keywords
     }
+
+    projects: allSanityProject {
+      edges {
+        node {
+          title
+          type
+          color
+          date(formatString: "MMMM YYYY")
+        }
+      }
+    }
   }
 `
 
@@ -27,16 +38,20 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
+  const projectNodes = (data || {}).projects
 
 
   return (
     <div>
       <Helmet title={site.title} />
       <Hero />
-      <Project />
-      <Project />
+      {projectNodes.edges.map(node => (
+          <Project key={node.id} {...node} />
+        ))
+      }
     </div>
   )
 }
 
 export default IndexPage
+
