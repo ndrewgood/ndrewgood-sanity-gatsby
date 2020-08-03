@@ -34,6 +34,7 @@ const IndexPage = props => {
       <Helmet title={site.title} />
       <Hero />
       <Project />
+      <Project />
     </div>
   )
 }

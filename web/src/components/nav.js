@@ -18,12 +18,11 @@ const nav = () => {
 
   return(
   <nav id="n" role="navigation">
-    <div className="space"></div>
       <ul>
-        <li>Work</li>
-        <li>Play</li>
-        <li>About</li>
-        <li>Resume</li>
+        <li><Link>Work</Link></li>
+        <li><Link>Play</Link></li>
+        <li><Link>About</Link></li>
+        <li><Link>Resume</Link></li>
       </ul>
   </nav>
   )

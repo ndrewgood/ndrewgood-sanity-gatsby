@@ -18,7 +18,13 @@ const hero = () => {
 
   return(
     <div className="p">
-        <h1>project</h1>
+      <div className="p-t">
+        <div className="p-tc">
+          <h1>Project Name</h1>
+          <h2>Type of Project</h2>
+        </div>
+      </div>
+      <div className="p-i"></div>
     </div>
   )
 }

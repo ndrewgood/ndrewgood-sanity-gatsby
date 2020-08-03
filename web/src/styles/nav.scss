@@ -1,11 +1,22 @@
 #n {
     position: sticky;
     top: 10px;
+    z-index: 100;
+    mix-blend-mode: difference;
+    color: white;
     ul {
         list-style: none;
         display: flex;
-        width: 200px;
+        width: 300px;
         justify-content: space-between;
         position: absolute;
+        padding-inline-start: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        a {
+            color: white !important;
+            font-weight: normal;
+        }
+
     }
 }

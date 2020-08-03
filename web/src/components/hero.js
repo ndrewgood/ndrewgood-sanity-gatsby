@@ -20,7 +20,7 @@ const hero = () => {
  let ang = 180;
 
   const gradStyle = {
-      'background': "conic-gradient(from " + ang + "deg, white, black)"
+      'background': "conic-gradient(from " + ang + "deg, white, black, white, black, white)"
   }
 
   return(
