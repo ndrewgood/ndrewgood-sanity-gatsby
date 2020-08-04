@@ -1,0 +1,23 @@
+#h2 {
+    display: flex;
+    height: 600px;
+    background-color: #150b8d;
+    h2 {
+        position: absolute;
+        font-weight: normal;
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        width: 800px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#b {
+    fill:#fcc480;
+    height: 500px;
+    width: 80vw;
+    margin: auto;
+}

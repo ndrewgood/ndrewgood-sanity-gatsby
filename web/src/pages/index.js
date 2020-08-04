@@ -2,6 +2,7 @@ import React from 'react'
 import {graphql, Link} from 'gatsby'
 import {Helmet} from 'react-helmet'
 import Hero from '../components/hero'
+import HeroTwo from '../components/hero2'
 import Project from '../components/project'
 
 
