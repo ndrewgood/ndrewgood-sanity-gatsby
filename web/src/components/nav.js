@@ -19,10 +19,15 @@ const nav = () => {
   return(
   <nav id="n" role="navigation">
       <ul>
-        <li><Link>Work</Link></li>
-        <li><Link>Play</Link></li>
-        <li><Link>About</Link></li>
-        <li><Link>Resume</Link></li>
+        <div>
+          <Link>@ndrewgood</Link>
+        </div>
+        <div id="n-m">
+          <li><Link>Work</Link></li>
+          <li><Link>Play</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link>Resume</Link></li>
+        </div>
       </ul>
   </nav>
   )

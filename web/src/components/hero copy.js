@@ -6,7 +6,7 @@ import '../styles/hero.scss'
 
 const hero = () => {
   const data = useStaticQuery(graphql`
-    query heroQuery {
+    query hero3Query {
       site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
         title
         description
@@ -19,10 +19,14 @@ const hero = () => {
 
  let ang = 180;
 
+  const gradStyle = {
+      'background': "conic-gradient(from " + ang + "deg, white, black, white, black, white, black, white)"
+  }
 
   return(
-    <div id="h">
+    <div style={gradStyle} id="h">
         <h2>Hi, my name is Andrew Goodridge.<br></br> I'm a UX designer and front-end developer studying at SCAD.</h2>
+        <div id="h-c"></div>
     </div>
   )
 }

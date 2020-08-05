@@ -7,16 +7,25 @@
     ul {
         list-style: none;
         display: flex;
-        width: 300px;
+        max-width: 800px;
+        width: 90vw;
         justify-content: space-between;
         position: absolute;
         padding-inline-start: 0px;
         left: 50%;
         transform: translateX(-50%);
+        div {
+            display: flex;
+        }
         a {
             color: white !important;
             font-weight: normal;
         }
 
     }
+}
+
+#n-m {
+    width: 250px;
+    justify-content: space-between;
 }

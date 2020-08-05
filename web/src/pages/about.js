@@ -5,7 +5,7 @@ import {Helmet} from 'react-helmet'
 
 
 export const query = graphql`
-  query Page2Query {
+  query aboutQuery {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
       description
@@ -14,7 +14,7 @@ export const query = graphql`
   }
 `
 
-const Page2 = props => {
+const About = props => {
   const {data, errors} = props
 
   if (errors) {
@@ -29,12 +29,9 @@ const Page2 = props => {
 
   return (
     <div>
-      <Helmet title={site.title}></Helmet>
-      <p>{site.title}</p>
-      <p>heres a new page</p>
-      <Link to="/">link to the index</Link>
+      <p>about</p>
     </div>
   )
 }
 
-export default Page2
+export default About

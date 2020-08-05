@@ -16,12 +16,17 @@ export const query = graphql`
       keywords
     }
 
-    projects: allSanityProject {
+    projects: allSanityProject(sort: { fields: [order], order: ASC }) {
       edges {
         node {
           title
+          order
           type
           color
+          id
+          slug {
+            current
+          }
           date(formatString: "MMMM YYYY")
         }
       }
@@ -47,7 +52,7 @@ const IndexPage = props => {
       <Helmet title={site.title} />
       <Hero />
       {projectNodes.edges.map(node => (
-          <Project key={node.id} {...node} />
+          <Project {...node} />
         ))
       }
     </div>
