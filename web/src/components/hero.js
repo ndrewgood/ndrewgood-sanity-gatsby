@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import '../styles/hero.scss' 
+
+import Three from './three/hero-three'
+import '../styles/hero.scss'
 
 
 
@@ -22,7 +24,8 @@ const hero = () => {
 
   return(
     <div id="h">
-        <h2>Hi, my name is Andrew Goodridge.<br></br> I'm a UX designer and front-end developer studying at SCAD.</h2>
+        <Three />
+        {/* <h2>Hi, my name is Andrew Goodridge.<br></br> I'm a UX designer and front-end developer studying at SCAD.</h2> */}
     </div>
   )
 }
