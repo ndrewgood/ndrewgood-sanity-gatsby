@@ -5,9 +5,9 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
-import category from './documents/category'
 import project from './documents/project'
 import siteSettings from './documents/siteSettings'
+import collaborators from './documents/collaborators'
 
 // Object types
 import bioPortableText from './objects/bioPortableText'
@@ -30,8 +30,8 @@ export default createSchema({
     simplePortableText,
     // The following are document types which will appear
     // in the studio.
-    category,
     project,
-    siteSettings
+    siteSettings,
+    collaborators
   ])
 })

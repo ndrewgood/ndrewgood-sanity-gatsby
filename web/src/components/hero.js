@@ -24,7 +24,7 @@ const hero = () => {
 
   return(
     <div id="h">
-        <Three />
+        <Three animate={true} />
         <h2>Hi, my name is Andrew Goodridge.<br></br> I'm a UX designer and front-end developer studying at SCAD.</h2>
     </div>
   )

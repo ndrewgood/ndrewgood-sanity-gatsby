@@ -6,6 +6,7 @@ import Navigation from '../components/nav'
 
 import '../styles/layout.scss'
 import '../styles/type.scss'
+import '../styles/temp-project.scss'
 
 export const query = graphql`
   query projectTempPageQuery($slug: String!) {
@@ -30,10 +31,50 @@ const ProjectTemplate = props => {
     )
   }
 
+  const tpiStyle = {
+      'backgroundColor': project.color
+  }
+
   return (
 
       <Transition location = {location}>
-        <h1>{project.title}</h1>
+        <div id="tp">
+          <div id="tp-c">
+            <div className="bar"></div>
+            <div id="tp-h">
+              <div className="tp-h-b">
+                <h1>{project.title}</h1>
+                <h2>{project.type}</h2>
+              </div>
+              <div className="tp-h-bh">
+                <div className="tp-h-b">
+                  <h3>Date</h3>
+                  <h4>{project.date}</h4>
+                </div>
+                <div className="tp-h-b">
+                  <h3>Tools</h3>
+                  <h4>{project.date}</h4>
+                </div>
+              </div>
+              <div className="tp-h-b">
+                <h3>Description</h3>
+                <h4>{project.type}</h4>
+              </div>
+              <div className="tp-h-bv">
+                <div className="tp-h-b">
+                  <h3>Collaborators</h3>
+                  <h4>{project.type}</h4>
+                </div>
+                <div className="tp-h-b">
+                  <h3>Links</h3>
+                  <h4>{project.date}</h4>
+                </div>
+              </div>
+            </div>
+            <div id="tp-i" style={tpiStyle}></div>
+          </div>
+        </div>
+        
       </Transition>
   )
 }

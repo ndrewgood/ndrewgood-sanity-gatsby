@@ -1,9 +1,14 @@
 import React from 'react'
 import {graphql, Link} from 'gatsby'
 import {Helmet} from 'react-helmet'
+
 import Hero from '../components/hero'
 import HeroTwo from '../components/hero2'
-import Project from '../components/project'
+import ProjectLarge from '../components/project-large'
+import ProjectSmall from '../components/project-small'
+import Footer from '../components/footer'
+
+import '../styles/project.scss'
 
 
 
@@ -21,6 +26,7 @@ export const query = graphql`
         node {
           title
           order
+          featured
           type
           color
           id
@@ -51,10 +57,23 @@ const IndexPage = props => {
     <div>
       <Helmet title={site.title} />
       <Hero />
-      {projectNodes.edges.map(node => (
-          <Project {...node} />
-        ))
-      }
+      <div id="p-c">
+          { projectNodes.edges.map(({ node }) => ( 
+              node.featured 
+              ? <ProjectLarge {...node} /> 
+              : null
+            ))
+          }
+          <div id="p-g">
+            { projectNodes.edges.map(({ node }) => ( 
+                node.featured 
+                ? null
+                : <ProjectSmall {...node} />
+              ))
+            }
+          </div>
+      </div>
+      <Footer />
     </div>
   )
 }

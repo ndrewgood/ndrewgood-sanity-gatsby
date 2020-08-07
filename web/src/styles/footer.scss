@@ -1,0 +1,22 @@
+#f {
+    background-color:rgb(180, 25, 58);
+    display: flex;
+    height: 300px;
+    position: relative;
+    z-index: -20;
+    color: white;
+    h1 {
+        position: fixed;
+        bottom: 0px;
+        z-index: -1;
+        mix-blend-mode: difference;
+
+    }
+
+}
+
+#f-c {
+    margin: auto;
+    width: 90vw;
+    max-width: 800px;
+}

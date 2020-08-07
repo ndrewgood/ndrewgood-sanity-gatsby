@@ -2,13 +2,18 @@ import {format} from 'date-fns'
 
 export default {
   name: 'project',
-  title: 'project test',
+  title: 'Project',
   type: 'document',
   fields: [
     {
       name: 'order',
       title: 'Order',
       type: 'number'
+    },
+    {
+      name: 'featured',
+      title: 'Featured',
+      type: 'boolean'
     },
     {
       name: 'title',

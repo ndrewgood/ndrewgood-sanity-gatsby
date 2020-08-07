@@ -19,8 +19,7 @@ const Dolly = () => {
 }
 
 
-const three = () => {
-
+const three = (props) => {
 
   return (
     <Canvas camera={{fov: 40, position: [0,5,0] }}>
@@ -29,10 +28,11 @@ const three = () => {
       <Sphere args={[2,40,40]}>
         <meshStandardMaterial attach="material" color="white" />
       </Sphere>
-      {/* <Box /> */}
       <Stars />
       {/* <OrbitControls /> */}
-      <Dolly />
+      {
+        props.animate ? <Dolly /> : null
+      }
     </Canvas>
   );
 
