@@ -20,7 +20,7 @@ const nav = () => {
   <nav id="n" role="navigation">
       <ul>
         <div>
-          <Link>@ndrewgood</Link>
+          <Link to="/">@ndrewgood</Link>
         </div>
         <div id="n-m">
           <li><Link>Work</Link></li>
