@@ -10,7 +10,7 @@ import '../styles/layout.scss'
 
 
 export const query = graphql`
-  query aboutQuery {
+  query playQuery {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
       description
@@ -19,7 +19,7 @@ export const query = graphql`
   }
 `
 
-const About = props => {
+const Play = props => {
   const {data, errors} = props
 
   if (errors) {
@@ -33,8 +33,8 @@ const About = props => {
   const contextData = useContext(MenuContext);
 
   useEffect(() => {
-    contextData.setActiveLink("about")
-    console.log("about effect triggered");
+    contextData.setActiveLink("play")
+    console.log("play effect triggered");
   }, []);
 
 
@@ -43,10 +43,10 @@ const About = props => {
     <div id="a">
       <div id="a-c">
         <div className="bar"></div>
-        <p>hi! my name is andrew goodridge and I'm a UX designer and Developer</p>
+        <p>play play play (plz work 🥺)</p>
       </div>
     </div>
   )
 }
 
-export default About
+export default Play

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Transition from '../components/transition'
 import Navigation from '../components/nav'
-import { ContextProviderComponent } from "../components/context"
+import { MenuContext } from "../components/context"
 
 
 import '../styles/layout.scss'
@@ -12,16 +12,23 @@ const Template = (props) => {
 
   const { children, location } = props
 
+  const [activeLink, setActiveLink] = useState("none");
+
+  const data = {
+      activeLink: activeLink,
+      setActiveLink: (p) => {setActiveLink(p); console.log("from data: " + activeLink)}
+  }
+
 
   return (
-    <ContextProviderComponent>
+    <MenuContext.Provider value={data}>
       <div id="c">
         <Navigation />
         <Transition location = {location}>
           { children }
         </Transition>
       </div>
-    </ContextProviderComponent>
+    </MenuContext.Provider>
   )
 }
 

@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import {graphql, Link} from 'gatsby'
 import {Helmet} from 'react-helmet'
 
-import MenuContext from '../components/context'
+import { MenuContext } from '../components/context'
 
 import Hero from '../components/hero'
 import HeroTwo from '../components/hero2'
@@ -12,6 +12,9 @@ import Footer from '../components/footer'
 
 import '../styles/project.scss'
 
+
+let lastScrollY = 0;
+let heroHeight = 0;
 
 
 
@@ -59,8 +62,21 @@ const IndexPage = props => {
 
   useEffect(() => {
     contextData.setActiveLink("none")
-    // console.log(contextData.activeLink);
-  });
+    console.log("index effect triggered");
+    window.addEventListener('scroll', handleScroll);
+
+  }, []);
+
+
+  const handleScroll = (e) => {
+    lastScrollY = window.scrollY;
+    heroHeight = document.getElementById('h').clientHeight;
+    lastScrollY >= heroHeight ? contextData.setActiveLink("work") : null
+    lastScrollY < heroHeight ? contextData.setActiveLink("none") : null
+    console.log(lastScrollY)
+
+
+  }
 
 
   return (
