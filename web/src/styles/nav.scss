@@ -19,7 +19,7 @@
             display: flex;
         }
         a {
-            color: white !important;
+            color: white;
             font-weight: normal;
         }
 
@@ -29,4 +29,18 @@
 #n-m {
     width: 250px;
     justify-content: space-between;
+    li {
+        a {
+            color: #a5a5a5;
+            transition: .4s;
+        }
+        a:hover {
+            color: white;
+        }
+    }
+
+}
+
+.active {
+    color: white !important;
 }

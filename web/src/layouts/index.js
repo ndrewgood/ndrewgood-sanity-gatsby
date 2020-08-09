@@ -2,23 +2,27 @@ import React from 'react'
 
 import Transition from '../components/transition'
 import Navigation from '../components/nav'
+import { ContextProviderComponent } from "../components/context"
+
 
 import '../styles/layout.scss'
 import '../styles/type.scss'
 
-class Template extends React.Component {
-  render() {
-    const { children, location } = this.props
+const Template = (props) => {
 
-    return (
+  const { children, location } = props
+
+
+  return (
+    <ContextProviderComponent>
       <div id="c">
         <Navigation />
         <Transition location = {location}>
-          {children}
+          { children }
         </Transition>
       </div>
-    )
-  }
+    </ContextProviderComponent>
+  )
 }
 
 export default Template

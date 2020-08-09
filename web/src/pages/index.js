@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import {graphql, Link} from 'gatsby'
 import {Helmet} from 'react-helmet'
+
+import MenuContext from '../components/context'
 
 import Hero from '../components/hero'
 import HeroTwo from '../components/hero2'
@@ -49,8 +51,16 @@ const IndexPage = props => {
     )
   }
 
+
   const site = (data || {}).site
   const projectNodes = (data || {}).projects
+
+  const contextData = useContext(MenuContext);
+
+  useEffect(() => {
+    contextData.setActiveLink("none")
+    // console.log(contextData.activeLink);
+  });
 
 
   return (

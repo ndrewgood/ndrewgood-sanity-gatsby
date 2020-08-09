@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-anchor-links',
     {
       resolve: `gatsby-plugin-layout`,
       options: {

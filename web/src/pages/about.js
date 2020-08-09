@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
 import {graphql, Link} from 'gatsby'
 import {Helmet} from 'react-helmet'
+import MenuContext from "../components/context"
+
+
+import '../styles/about.scss'
+import '../styles/layout.scss'
 
 
 
@@ -25,11 +30,21 @@ const About = props => {
 
   const site = (data || {}).site
 
+  const contextData = useContext(MenuContext);
+
+  useEffect(() => {
+    contextData.setActiveLink("about")
+    // console.log(contextData.activeLink);
+  });
+
 
 
   return (
-    <div>
-      <p>about</p>
+    <div id="a">
+      <div id="a-c">
+        <div className="bar"></div>
+        <p>hi! my name is andrew goodridge and I'm a UX designer and Developer</p>
+      </div>
     </div>
   )
 }
