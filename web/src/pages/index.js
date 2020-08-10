@@ -15,7 +15,7 @@ import '../styles/project.scss'
 
 let lastScrollY = 0;
 let heroHeight = 0;
-
+let indexTitle = "Home / @ndrewgood"
 
 
 export const query = graphql`
@@ -70,13 +70,17 @@ const IndexPage = props => {
     }
   }, []);
 
+  
+
 
   const handleScroll = (e) => {
     lastScrollY = window.scrollY;
     heroHeight = document.getElementById('h').clientHeight;
     lastScrollY >= heroHeight ? contextData.setActiveLink("work") : null
     lastScrollY < heroHeight ? contextData.setActiveLink("none") : null
-    console.log(lastScrollY)
+
+    lastScrollY < heroHeight ? indexTitle = "Work / @ndrewgood" : "Home / @ndrewgood"
+    lastScrollY >= heroHeight ? indexTitle = "Home / @ndrewgood" : "Work / @ndrewgood"
 
 
   }
@@ -84,7 +88,7 @@ const IndexPage = props => {
 
   return (
     <div>
-      <Helmet title={site.title} />
+      <Helmet title={indexTitle} />
       <Hero />
       <div id="p-c">
           { projectNodes.edges.map(({ node }) => ( 

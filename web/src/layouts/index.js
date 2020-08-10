@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Transition from '../components/transition'
 import Navigation from '../components/nav'
 import { MenuContext } from "../components/context"
+import SEO from '../components/seo'
 
 
 import '../styles/layout.scss'
@@ -23,6 +24,7 @@ const Template = (props) => {
   return (
     <MenuContext.Provider value={data}>
       <div id="c">
+        <SEO />
         <Navigation />
         <Transition location = {location}>
           { children }

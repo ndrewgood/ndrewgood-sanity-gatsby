@@ -41,6 +41,7 @@ const About = props => {
 
   return (
     <div id="a">
+      <Helmet title="About / @ndrewgood" />
       <div id="a-c">
         <div className="bar"></div>
         <p>hi! my name is andrew goodridge and I'm a UX designer and Developer</p>

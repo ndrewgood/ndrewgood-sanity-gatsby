@@ -1,5 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import {Helmet} from 'react-helmet'
+
 
 import Transition from '../components/transition'
 import Navigation from '../components/nav'
@@ -39,6 +41,7 @@ const ProjectTemplate = props => {
 
       <Transition location = {location}>
         <div id="tp">
+        <Helmet title={project.title + " / @ndrewgood"} />
           <div id="tp-c">
             <div className="bar"></div>
             <div id="tp-h">

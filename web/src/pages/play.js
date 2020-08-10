@@ -41,6 +41,7 @@ const Play = props => {
 
   return (
     <div id="a">
+      <Helmet title="Play / @ndrewgood" />
       <div id="a-c">
         <div className="bar"></div>
         <p>play play play (plz work 🥺)</p>
