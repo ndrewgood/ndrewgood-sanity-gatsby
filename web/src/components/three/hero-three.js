@@ -26,7 +26,7 @@ const three = (props) => {
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Sphere args={[2,40,40]}>
-        <meshStandardMaterial attach="material" color="white" />
+        <meshStandardMaterial attach="material" color="blue" />
       </Sphere>
       <Stars />
       {/* <OrbitControls /> */}
