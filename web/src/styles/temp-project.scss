@@ -38,6 +38,13 @@
         font-size: 18px;
         color: rgb(165, 165, 165);
     }
+    a {
+        font-weight: normal;
+        color: rgb(165, 165, 165);
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 .tp-h-bh {
@@ -57,3 +64,41 @@
     margin: auto;
     margin-top: 30px;
 }
+
+.l {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    .l-bar {
+        margin-top: 3px;
+        height: 1px;
+        width: 100%;
+        background-color: rgb(165, 165, 165);
+    }
+}
+
+.l:hover {
+    cursor: pointer;
+    h4 {
+        color: black !important;
+    }
+    .l-bar {
+        background-color: black;
+    }
+    text-decoration: none !important;
+}
+
+.l-i {
+    h4 {
+        color: black !important;
+    }
+    .l-bar {
+        background-color: black !important;
+    }
+}
+
+
+
+
+

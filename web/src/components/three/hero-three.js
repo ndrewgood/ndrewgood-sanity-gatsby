@@ -21,15 +21,23 @@ const Dolly = () => {
 
 const three = (props) => {
 
+
   return (
     <Canvas camera={{fov: 40, position: [0,5,0] }}>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Sphere args={[2,40,40]}>
+      {/* <ambientLight /> */}
+      <pointLight position={[30, 30, 30]} color="red" />
+      <pointLight position={[-30, -30, -30]} color="blue" />
+
+      <Sphere args={[2,40,40]}
+        onPointerEnter={(e) => console.log("enter")}
+        onPointerLeave={(e) => console.log("leave")}
+        >
         <meshStandardMaterial attach="material" color="white" />
       </Sphere>
       <Stars />
-      {/* <OrbitControls /> */}
+      { 
+        props.control ? <OrbitControls /> : null 
+      }
       {
         props.animate ? <Dolly /> : null
       }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import {Helmet} from 'react-helmet'
 
@@ -18,6 +18,16 @@ export const query = graphql`
         id
         title
         type
+        collaborators {
+          name
+          portfolio
+        }
+        tools
+        links {
+          name
+          url
+          important
+        }
     }
   }
 `
@@ -56,7 +66,7 @@ const ProjectTemplate = props => {
                 </div>
                 <div className="tp-h-b">
                   <h3>Tools</h3>
-                  <h4>{project.date}</h4>
+                  <h4>{project.tools.join(", ")}</h4>
                 </div>
               </div>
               <div className="tp-h-b">
@@ -66,11 +76,33 @@ const ProjectTemplate = props => {
               <div className="tp-h-bv">
                 <div className="tp-h-b">
                   <h3>Collaborators</h3>
-                  <h4>{project.type}</h4>
+                  <h4>
+                  {
+                    project.collaborators.map((v, i) => {
+                        return (
+                          <Fragment>
+                            <a target="_blank" href={v.portfolio}>{v.name}</a> 
+                            {project.collaborators.length - i !== 1 ? ", " : null}
+                          </Fragment>
+                        )
+                      })
+                    }
+                  </h4>
                 </div>
                 <div className="tp-h-b">
                   <h3>Links</h3>
-                  <h4>{project.date}</h4>
+                  <div className="tp-h-ls">
+                    {
+                      project.links.map((v, i) => {
+                        return (
+                          <a target="_blank" href={v.url} className={v.important ? "l l-i" : "l"}>
+                            <h4>{v.name}</h4>
+                            <div className="l-bar"></div>
+                          </a>
+                        )
+                      })
+                    }
+                  </div>
                 </div>
               </div>
             </div>

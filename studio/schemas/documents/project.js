@@ -26,6 +26,29 @@ export default {
       type: 'string'
     },
     {
+      name: 'tools',
+      title: 'Tools',
+      type: 'array',
+      of: [{type: 'string'}]
+    },
+    {
+      name: 'collaborators',
+      title: 'Collaborators',
+      type: 'array',
+      of: [ {
+        type: 'reference',
+        to: [
+          {type: 'collaborators'}
+        ]
+      }]
+    },
+    {
+      name: 'links',
+      title: 'Links',
+      type: 'array',
+      of: [{type: 'link'}]
+    },
+    {
       name: 'color',
       title: 'Color',
       type: 'string',
@@ -42,8 +65,8 @@ export default {
       }
     },
     {
-      name: 'excerpt',
-      title: 'Excerpt',
+      name: 'description',
+      title: 'Description',
       type: 'simplePortableText'
     },
     {
