@@ -85,8 +85,14 @@ export default {
     },
     {
       name: 'body',
-      title: 'Body',
-      type: 'projectPortableText'
+      title: 'Body Content',
+      type: 'array',
+      of: [
+        {type: 'content'},
+        {type: 'contentImage'},
+        {type: 'imageText'},
+        {type: 'contentBar'}
+      ]
     }
   ],
   preview: {

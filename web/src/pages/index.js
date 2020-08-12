@@ -93,7 +93,7 @@ const IndexPage = props => {
       <div id="p-c">
           { projectNodes.edges.map(({ node }) => ( 
               node.featured 
-              ? <ProjectLarge {...node} /> 
+              ? <ProjectLarge onClick={contextData.setActiveLink("work")} {...node} /> 
               : null
             ))
           }
@@ -101,7 +101,7 @@ const IndexPage = props => {
             { projectNodes.edges.map(({ node }) => ( 
                 node.featured 
                 ? null
-                : <ProjectSmall {...node} />
+                : <ProjectSmall onClick={contextData.setActiveLink("work")} changeLink={contextData.setActiveLink} {...node} />
               ))
             }
           </div>

@@ -15,6 +15,12 @@ import figure from './objects/figure'
 import projectPortableText from './objects/projectPortableText'
 import simplePortableText from './objects/simplePortableText'
 import link from './objects/link'
+import contentImage from './objects/contentImage'
+import imageText from './objects/imageText'
+import content from './objects/content'
+import contentBar from './objects/contentBar'
+
+
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -31,6 +37,10 @@ export default createSchema({
     projectPortableText,
     simplePortableText,
     link,
+    contentImage,
+    imageText,
+    content,
+    contentBar,
     // The following are document types which will appear
     // in the studio.
     project,
