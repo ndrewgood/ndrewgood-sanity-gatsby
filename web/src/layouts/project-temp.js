@@ -40,15 +40,10 @@ export const query = graphql`
 `
 
 const ProjectTemplate = props => {
-  const {data, errors} = props
+  const {data, location} = props
 
   const project = data && data.project
 
-  if (errors) {
-    return (
-    <h1>{errors}</h1>
-    )
-  }
 
   const tpiStyle = {
     'backgroundColor': project.color

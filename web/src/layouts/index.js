@@ -11,6 +11,8 @@ import '../styles/type.scss'
 
 const Template = (props) => {
 
+  
+
   const { children, location } = props
 
   const [activeLink, setActiveLink] = useState("none");
