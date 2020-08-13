@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "ndrewgood-sanity-gatsby",
+  "name": "ndrewgood-portfolio",
   "version": "0.0.0",
   "scripts": {
     "build": "lerna run build --parallel",

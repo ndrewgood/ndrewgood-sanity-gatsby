@@ -19,7 +19,6 @@ const hero = () => {
   const site = (data || {}).site
 
 
- let ang = 180;
 
 
   return(

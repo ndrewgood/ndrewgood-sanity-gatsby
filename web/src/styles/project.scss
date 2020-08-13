@@ -55,3 +55,18 @@ a:hover {
         margin-top: 0px !important;
     }
 }
+
+@media only screen and (max-width: 800px) {
+    #p-g {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .p {
+        width: 90vw !important;
+    }
+    .p-i {
+        width: 90vw !important;
+    }
+    .bar {
+        width: 90vw !important;
+    }
+}

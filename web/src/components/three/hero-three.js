@@ -26,7 +26,13 @@ const three = (props) => {
     <Canvas camera={{fov: 40, position: [0,5,0] }}>
       {/* <ambientLight /> */}
       <pointLight position={[30, 30, 30]} color="red" />
+      <pointLight position={[-30, 30, 30]} color="blue" />
+      <pointLight position={[30, -30, 30]} color="green" />
+      <pointLight position={[-30, -30, 30]} color="purple" />
+      <pointLight position={[30, 30, -30]} color="red" />
       <pointLight position={[-30, -30, -30]} color="blue" />
+      <pointLight position={[30, -30, -30]} color="green" />
+      <pointLight position={[-30, -30, -30]} color="purple" />
 
       <Sphere args={[2,40,40]}
         onPointerEnter={(e) => console.log("enter")}
