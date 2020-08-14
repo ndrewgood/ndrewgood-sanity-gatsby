@@ -35,6 +35,11 @@ export const query = graphql`
         }
         _rawDescription
         _rawBody
+        thumbImg{
+          asset{
+            url
+          }
+        }
     }
   }
 `
@@ -46,7 +51,9 @@ const ProjectTemplate = props => {
 
 
   const tpiStyle = {
-    'backgroundColor': project.color
+    'backgroundColor': project.color,
+    'backgroundPosition': "center",
+    'backgroundSize': "100% auto"
   }
 
   const tpcStyle = {
@@ -70,7 +77,9 @@ const ProjectTemplate = props => {
             <div className="bar"></div>
             <ProjectHeader {...project} />
           </div>
-          <div id="tp-i" style={tpiStyle}></div>
+          <div id="tp-i" style={tpiStyle}>
+            <img src={project.thumbImg.asset.url}></img>
+          </div>
           <ProjectContent {...project} />
         </div>
         <Footer />

@@ -13,6 +13,9 @@ const projectLarge = (props) => {
 
   const piStyle = {
     'backgroundColor': props.color,
+    'backgroundImage': "url(" + props.thumbImg.asset.url + ")",
+    'backgroundPosition': "center",
+    'backgroundSize': "auto 100%",
     'width': '800px',
     'height': '400px'
   }

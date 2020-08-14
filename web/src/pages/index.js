@@ -39,6 +39,11 @@ export const query = graphql`
             current
           }
           date(formatString: "MMMM YYYY")
+          thumbImg {
+            asset {
+              url
+            }
+          }
         }
       }
     }
