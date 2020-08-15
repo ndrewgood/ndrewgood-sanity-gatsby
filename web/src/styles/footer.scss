@@ -6,10 +6,8 @@
     z-index: -20;
     color: white;
     h1 {
-        position: fixed;
-        bottom: 0px;
-        z-index: -1;
-        mix-blend-mode: difference;
+        position: relative;
+
 
     }
 
@@ -19,4 +17,19 @@
     margin: auto;
     width: 90vw;
     max-width: 800px;
+    display: flex;
+    height: 300px
+}
+
+#f-l, #f-r {
+    position: fixed;
+    bottom: 0px;
+    z-index: -1;
+    mix-blend-mode: difference;
+    max-width: calc(800px / 2);
+    width: calc(90vw / 2);
+}
+
+#f-r {
+    left: 50%;
 }

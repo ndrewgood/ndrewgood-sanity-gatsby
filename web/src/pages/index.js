@@ -111,7 +111,7 @@ const IndexPage = props => {
             }
           </div>
       </div>
-      <Footer />
+      <Footer heroHeight={heroHeight} scrollY={lastScrollY} />
     </div>
   )
 }

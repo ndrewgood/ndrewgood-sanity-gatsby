@@ -18,12 +18,14 @@ const hero = () => {
   `)
   const site = (data || {}).site
 
+  const [loading, setLoading] = useState("");
 
 
 
   return(
     <div id="h">
-        <Three animate={true} control={false}/>
+        <Three setLoad={setLoading} animate={true} control={false}/>
+        <h3 class={loading}>Loading...</h3>
         <h2>Hi, my name is Andrew Goodridge.<br></br> I'm a UX designer and front-end developer studying at SCAD.</h2>
     </div>
   )
