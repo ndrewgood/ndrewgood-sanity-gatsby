@@ -30,7 +30,7 @@ const three = (props) => {
     <Canvas className={canvClass}
             onCreated={() => {setCanvClass("useThree displayThree"); props.setLoad("hideLoad")}}
             camera={{fov: 40, position: [0,5,0] }} 
-            pixelRatio={window.devicePixelRatio}>
+            pixelRatio={typeof window === 'undefined' ? "1" : window.devicePixelRatio}>
       <ambientLight color="white" intensity={.4}/>
       <pointLight position={[30, 30, 30]} intensity={.5} color="red" />
       <pointLight position={[-30, 30, 30]} intensity={.5} color="blue" />
