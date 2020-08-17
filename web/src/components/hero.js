@@ -4,7 +4,7 @@ import { graphql, useStaticQuery, Link } from 'gatsby'
 import Three from './three/hero-three'
 import '../styles/hero.scss'
 
-
+let windowWidth;
 
 const hero = () => {
   const data = useStaticQuery(graphql`
@@ -19,8 +19,6 @@ const hero = () => {
   const site = (data || {}).site
 
   const [loading, setLoading] = useState("");
-
-
 
   return(
     <div id="h">

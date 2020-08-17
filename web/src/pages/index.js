@@ -70,6 +70,7 @@ const IndexPage = props => {
     contextData.setActiveLink("none")
     console.log("index effect triggered");
     window.addEventListener('scroll', handleScroll);
+    window.scrollY >= 1000 ? showFooter = "showFooter" : "null"
 
     return () => {
       console.log("index effect deactivated");

@@ -1,8 +1,8 @@
-import React, { useState, useRef, useMemo, Suspense } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Canvas, useFrame, useThree } from "react-three-fiber";
 import { OrbitControls, Sphere, Stars, Box } from 'drei';
 
-
+let heroFov;
 
 const Dolly = () => {
   const { camera } = useThree(); 
@@ -11,7 +11,11 @@ const Dolly = () => {
     camera.updateProjectionMatrix(void (camera.position.x = Math.sin(clock.getElapsedTime() / 18) * 10))
     // camera.updateProjectionMatrix(void (camera.position.y = clock.getElapsedTime()) * -1)
     camera.updateProjectionMatrix(void (camera.position.z = Math.cos(clock.getElapsedTime() / 18) * 10))
-
+    
+    let windowWidth = window.innerWidth
+    let cFov = 40
+    windowWidth <= 800 ? cFov = 70 : cFov = 40
+    camera.updateProjectionMatrix(void (camera.fov = cFov))
 
     // camera.updateProjectionMatrix(void (camera.position.y = 10 + Math.sin(clock.getElapsedTime()) * 15))
     camera.lookAt(0,0,0)
@@ -23,13 +27,22 @@ const Dolly = () => {
 
 const three = (props) => {
 
+
   const [canvClass, setCanvClass] = useState("useThree");
+
+
+  console.log("windowWidth: " + props.windowWidth);
+
+  let cameraSettings = {
+    fov: 40,
+    position: [0,5,0]
+  }
 
 
   return (
     <Canvas className={canvClass}
             onCreated={() => {setCanvClass("useThree displayThree"); props.setLoad("hideLoad")}}
-            camera={{fov: 40, position: [0,5,0] }} 
+            camera={cameraSettings} 
             pixelRatio={typeof window === 'undefined' ? "1" : window.devicePixelRatio}>
       <ambientLight color="white" intensity={.4}/>
       <pointLight position={[30, 30, 30]} intensity={.5} color="red" />
