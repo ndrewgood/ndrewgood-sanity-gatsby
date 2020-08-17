@@ -14,7 +14,7 @@ const Dolly = () => {
     
     let windowWidth = window.innerWidth
     let cFov = 40
-    windowWidth <= 800 ? cFov = 70 : cFov = 40
+    windowWidth <= 800 ? cFov = 60 : cFov = 40
     camera.updateProjectionMatrix(void (camera.fov = cFov))
 
     // camera.updateProjectionMatrix(void (camera.position.y = 10 + Math.sin(clock.getElapsedTime()) * 15))

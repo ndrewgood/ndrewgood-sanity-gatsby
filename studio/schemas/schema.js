@@ -6,6 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
 import project from './documents/project'
+import play from './documents/play'
 import siteSettings from './documents/siteSettings'
 import collaborators from './documents/collaborators'
 
@@ -44,6 +45,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     project,
+    play,
     siteSettings,
     collaborators
   ])

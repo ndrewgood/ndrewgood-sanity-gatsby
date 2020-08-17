@@ -86,7 +86,7 @@ const ProjectTemplate = props => {
           </div>
           <ProjectContent {...project} />
         </div>
-        <Footer />
+        <Footer showFoot={"showFooter"}/>
       </Transition>
   )
 }

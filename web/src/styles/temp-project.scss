@@ -2,12 +2,15 @@
     display: flex;
     background: white;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
 }
 
 .tp-c {
     // margin: auto;
     // max-width: 800px;
     // width: 90vw;
+
 }
 
 #tp-h {
