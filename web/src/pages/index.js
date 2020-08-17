@@ -16,6 +16,7 @@ import '../styles/project.scss'
 let lastScrollY = 0;
 let heroHeight = 0;
 let indexTitle = "Home / @ndrewgood"
+let showFooter = "null"
 
 
 export const query = graphql`
@@ -71,6 +72,7 @@ const IndexPage = props => {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
+      console.log("index effect deactivated");
       window.removeEventListener('scroll', handleScroll);
     }
   }, []);
@@ -86,10 +88,17 @@ const IndexPage = props => {
 
     lastScrollY < heroHeight ? indexTitle = "Work / @ndrewgood" : "Home / @ndrewgood"
     lastScrollY >= heroHeight ? indexTitle = "Home / @ndrewgood" : "Work / @ndrewgood"
+    
+    lastScrollY < heroHeight ? showFooter = "showFooter" : "null"
+    lastScrollY >= heroHeight ? showFooter = "null" : "showFooter"
+    
+    console.log(showFooter)
 
 
   }
 
+
+// onClick={contextData.setActiveLink("work")}
 
   return (
     <div>
@@ -98,7 +107,7 @@ const IndexPage = props => {
       <div id="p-c">
           { projectNodes.edges.map(({ node }) => ( 
               node.featured 
-              ? <ProjectLarge onClick={contextData.setActiveLink("work")} {...node} /> 
+              ? <ProjectLarge  {...node} /> 
               : null
             ))
           }
@@ -106,12 +115,12 @@ const IndexPage = props => {
             { projectNodes.edges.map(({ node }) => ( 
                 node.featured 
                 ? null
-                : <ProjectSmall onClick={contextData.setActiveLink("work")} changeLink={contextData.setActiveLink} {...node} />
+                : <ProjectSmall {...node} />
               ))
             }
           </div>
       </div>
-      <Footer heroHeight={heroHeight} scrollY={lastScrollY} />
+      <Footer showFoot={showFooter} />
     </div>
   )
 }

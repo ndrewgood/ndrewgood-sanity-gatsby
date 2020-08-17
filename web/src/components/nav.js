@@ -15,16 +15,16 @@ const nav = (props) => {
 
   return(
   <MenuContext.Consumer>
-    {({ activeLink, setActiveLink }) => (
+    {({ activeLink }) => (
       <nav id="n" role="navigation">
       <ul>
         <div>
           <Link to={`/${home}`}><span>@ndrewgood</span></Link>
         </div>
         <div id="n-m">
-          <li className="test" onClick={(e) => { e.preventDefault(); console.log("fuck: " + activeLink); setActiveLink("work"); }}><AnchorLink to={`/${work}`} className={activeLink == "work" ? "active" : null }><span>Work</span></AnchorLink></li>
+          <li><AnchorLink to={`/${work}`} className={activeLink == "work" ? "active" : null }><span>Work</span></AnchorLink></li>
           <li><Link to={`/${play}`} className = {activeLink == "play" ? "active" : null }>Play</Link></li>
-          <li><Link to={`/${about}`} className={activeLink == "about" ? "active" : null }>About</Link></li>
+          <li><Link to={`/${about}`} className = {activeLink == "about" ? "active" : null }>About</Link></li>
           <li><Link>Resume</Link></li>
         </div>
       </ul>

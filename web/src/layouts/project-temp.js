@@ -64,7 +64,11 @@ const ProjectTemplate = props => {
   const contextData = useContext(MenuContext);
 
   useEffect(() => {
-    contextData.setActiveLink("work")
+    setTimeout(() => {
+      contextData.setActiveLink("work");
+      console.log("set work?")
+    }, 500);
+
   }, []);
 
 
