@@ -2,10 +2,14 @@ import React, { useEffect, useContext } from 'react'
 import {graphql, Link} from 'gatsby'
 import {Helmet} from 'react-helmet'
 import { MenuContext } from "../components/context"
+import BlockContent from '@sanity/block-content-to-react'
 
+
+import Footer from '../components/footer'
 
 import '../styles/about.scss'
 import '../styles/layout.scss'
+
 
 
 
@@ -15,6 +19,8 @@ export const query = graphql`
       title
       description
       keywords
+      _rawAboutdesc
+      _rawAboutpic
     }
   }
 `
@@ -35,6 +41,7 @@ const About = props => {
   useEffect(() => {
     contextData.setActiveLink("about")
     console.log("about effect triggered");
+
   }, []);
 
 
@@ -42,9 +49,67 @@ const About = props => {
   return (
     <div id="a">
       <Helmet title="About / @ndrewgood" />
+      <div id="a-bg"></div>
       <div id="a-c">
-        <div className="bar"></div>
-        <p>hi! my name is andrew goodridge and I'm a UX designer and Developer</p>
+        <div id="a-ca">
+          <div id="a-p">
+            <BlockContent
+              blocks={site._rawAboutpic}
+              renderContainerOnSingleChild={true}
+              className="a-image"
+              projectId="wvk3aqii"
+              dataset="production"
+            />
+          </div>
+          <div id="a-d">
+            <BlockContent 
+              renderContainerOnSingleChild={true}
+              className="a-desc" 
+              blocks={site._rawAboutdesc} />
+          </div>
+        </div>
+        <div className="bar-white"></div>
+        <div id="af">
+            <div id="af-l">
+              <p>Feel free to email or DM me on any of my socials. Lets make something happen :-)</p>
+              <a className="f-email" target="_blank" href="mailto:hey@ndrewgood.com">hey@ndrewgood.com</a>
+              <p className="f-code">Website made with ❤️... and code. more info <a target="_blank" href="https://github.com/ndrewgood/ndrewgood-sanity-gatsby">here</a>.</p>
+            </div>
+            <div id="af-r">
+              <ul>
+                <Link to="https://www.instagram.com/ndrewgood/">
+                  <li>
+                    <p>Instagram</p>
+                    <div className="f-linkBar"></div>
+                  </li>
+                </Link>
+                <Link to="https://www.linkedin.com/in/ndrewgood/">
+                  <li>
+                    <p>LinkedIn</p>
+                    <div className="f-linkBar"></div>
+                  </li>
+                </Link>
+                <Link to="https://github.com/ndrewgood">
+                  <li>
+                    <p>Github</p>
+                    <div className="f-linkBar"></div>
+                  </li>
+                </Link>
+                <Link to="https://www.are.na/andrew-goodridge">
+                  <li>
+                    <p>Are.na</p>
+                    <div className="f-linkBar"></div>
+                  </li>
+                </Link>
+                <Link to="https://open.spotify.com/user/22zbmyiz6chqqhzc6enozraoq?si=TdaGbApER0uHsWTXmowoJQ">
+                  <li>
+                    <p>Spotify</p>
+                    <div className="f-linkBar"></div>
+                  </li>
+                </Link>
+              </ul>
+          </div>
+        </div>
       </div>
     </div>
   )

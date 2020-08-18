@@ -80,3 +80,9 @@
     opacity: 1 !important;
     display: flex !important;
 }
+
+.showFooter-inv {
+    opacity: 1 !important;
+    display: flex !important;
+    mix-blend-mode: exclusion;
+}

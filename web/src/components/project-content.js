@@ -14,14 +14,17 @@ import '../styles/temp-project.scss'
 
 const projectContent = (props) => {
 
-    const project = props
 
     return (
         <div className="tp-c">
-            { project._rawBody ? project._rawBody.map((val, i) => {
+            { props._rawBody ? props._rawBody.map((val, i) => {
+                console.log(i + ": "+ val._type);
                 if (val._type == "content") {
                     return(
-                        <BlockContent className="c-block c-text" blocks={val.text} />
+                        <BlockContent 
+                        renderContainerOnSingleChild={true}
+                        className="c-block c-text" 
+                        blocks={val.text} />
                     )
                 } else if (val._type == "contentImage") {
                      if (val.size == "cont-width"){

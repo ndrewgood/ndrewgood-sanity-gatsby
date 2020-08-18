@@ -78,6 +78,7 @@ const IndexPage = props => {
     return () => {
       console.log("index effect deactivated");
       window.removeEventListener('scroll', handleScroll);
+      showFooter = "null"
     }
   }, []);
 
@@ -101,8 +102,6 @@ const IndexPage = props => {
 
   }
 
-
-// onClick={contextData.setActiveLink("work")}
 
   return (
     <div>

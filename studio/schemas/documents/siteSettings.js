@@ -29,6 +29,17 @@ export default {
       options: {
         layout: 'tags'
       }
-    }
+    },
+    {
+      name: 'aboutpic',
+      type: 'image',
+      title: 'About - Picture'
+    },
+    {
+      name: 'aboutdesc',
+      type: 'simplePortableText',
+      title: 'About - Description',
+      description: 'Describe your portfolio for search engines and social media.'
+    },
   ]
 }

@@ -1,0 +1,16 @@
+#pl {
+    width: 90vw;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#pl-c {
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden;
+    background-color: white;
+}

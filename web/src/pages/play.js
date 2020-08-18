@@ -3,18 +3,44 @@ import {graphql, Link} from 'gatsby'
 import {Helmet} from 'react-helmet'
 import { MenuContext } from "../components/context"
 
+import ProjectSmall from '../components/project-small'
 
-import '../styles/about.scss'
+
+
+import '../styles/play.scss'
 import '../styles/layout.scss'
+import '../styles/project.scss'
+
 
 
 
 export const query = graphql`
-  query playQuery {
+  query PlayPageQuery {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
       description
       keywords
+    }
+
+    play: allSanityPlay(sort: { fields: [order], order: ASC }) {
+      edges {
+        node {
+          title
+          order
+          type
+          color
+          id
+          slug {
+            current
+          }
+          date(formatString: "MMMM YYYY")
+          thumbImg {
+            asset {
+              url
+            }
+          }
+        }
+      }
     }
   }
 `
@@ -29,6 +55,8 @@ const Play = props => {
   }
 
   const site = (data || {}).site
+  const playNodes = (data || {}).play
+
 
   const contextData = useContext(MenuContext);
 
@@ -40,11 +68,16 @@ const Play = props => {
 
 
   return (
-    <div id="a">
+    <div id="pl">
       <Helmet title="Play / @ndrewgood" />
-      <div id="a-c">
-        <div className="bar"></div>
-        <p>play play play (plz work 🥺)</p>
+        {/* <div className="bar"></div> */}
+        <div id="pl-c">
+          <div id="p-g">
+            { playNodes.edges.map(({ node }) => ( 
+              <ProjectSmall {...node} />
+              ))
+            }
+          </div>
       </div>
     </div>
   )

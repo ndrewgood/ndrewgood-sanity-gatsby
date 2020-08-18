@@ -12,16 +12,17 @@ const projectSmall = (props) => {
 
   const piStyle = {
     'backgroundColor': props.color,
-    'backgroundImage': "url(" + props.thumbImg.asset.url + ")",
+    'backgroundImage': props.thumbImg ? "url(" + props.thumbImg.asset.url + ")" : "none",
     'backgroundPosition': "center",
     'backgroundSize': "auto 100%",
     'width': '100%',
     'height': '387px'
   }
 
+  const slug = "/" + props.slug.current
 
   return(
-    <Link to={props.slug.current} id={props.id} style={pStyle} className="p">
+    <Link to={slug} id={props.id} style={pStyle} className="p">
       <div className="p-i" style={piStyle}></div>
       <div className="bar-small"></div>
       <div className="p-tc">
