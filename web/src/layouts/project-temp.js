@@ -34,6 +34,7 @@ export const query = graphql`
           important
         }
         _rawDescription
+        _rawCollaborators
         _rawBody
         thumbImg{
           asset{
@@ -51,7 +52,7 @@ const ProjectTemplate = props => {
 
 
   const tpiStyle = {
-    'backgroundColor': project.color,
+    // 'backgroundColor': project.color,
     'backgroundPosition': "center",
     'backgroundSize': "100% auto"
   }

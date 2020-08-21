@@ -20,9 +20,7 @@ body {
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 a:hover {
@@ -31,4 +29,17 @@ a:hover {
 
 p {
     font-size: 18px;
+}
+
+.link-c {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow {
+    background-image: url('../assets/link-icon-white.svg');
+    background-size: 14px 14px;
+    height: 14px;
+    width: 14px;
+    margin-top: 4px;
 }

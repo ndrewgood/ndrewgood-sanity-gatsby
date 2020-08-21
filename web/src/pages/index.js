@@ -107,7 +107,7 @@ const IndexPage = props => {
     <div>
       <Helmet title={indexTitle} />
       <Hero />
-      <div id="p-c">
+      <div id="work">
           { projectNodes.edges.map(({ node }) => ( 
               node.featured 
               ? <ProjectLarge  {...node} /> 

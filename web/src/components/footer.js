@@ -23,31 +23,46 @@ const footer = (props) => {
               <ul>
                 <Link to="https://www.instagram.com/ndrewgood/">
                   <li>
-                    <p>Instagram</p>
+                    <div className="link-c">
+                      <p>Instagram</p>
+                      <div className="arrow"></div>
+                    </div>
                     <div className="f-linkBar"></div>
                   </li>
                 </Link>
                 <Link to="https://www.linkedin.com/in/ndrewgood/">
                   <li>
-                    <p>LinkedIn</p>
+                    <div className="link-c">
+                      <p>LinkedIn</p>
+                      <div className="arrow"></div>
+                    </div>
                     <div className="f-linkBar"></div>
                   </li>
                 </Link>
                 <Link to="https://github.com/ndrewgood">
                   <li>
-                    <p>Github</p>
+                    <div className="link-c">
+                      <p>Github</p>
+                      <div className="arrow"></div>
+                    </div>
                     <div className="f-linkBar"></div>
                   </li>
                 </Link>
                 <Link to="https://www.are.na/andrew-goodridge">
                   <li>
-                    <p>Are.na</p>
+                    <div className="link-c">
+                      <p>Are.na</p>
+                      <div className="arrow"></div>
+                    </div>
                     <div className="f-linkBar"></div>
                   </li>
                 </Link>
                 <Link to="https://open.spotify.com/user/22zbmyiz6chqqhzc6enozraoq?si=TdaGbApER0uHsWTXmowoJQ">
                   <li>
-                    <p>Spotify</p>
+                    <div className="link-c">
+                      <p>Spotify</p>
+                      <div className="arrow"></div>
+                    </div>
                     <div className="f-linkBar"></div>
                   </li>
                 </Link>

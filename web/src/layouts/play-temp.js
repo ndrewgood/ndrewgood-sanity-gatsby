@@ -34,6 +34,7 @@ export const query = graphql`
           important
         }
         _rawDescription
+        _rawCollaborators
         _rawBody
         thumbImg{
           asset{
