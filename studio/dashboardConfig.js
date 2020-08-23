@@ -12,16 +12,16 @@ export default {
                 'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
               sites: [
                 {
-                  buildHookId: '',
+                  buildHookId: '5f1b0b9a33a8f537befc53cb',
                   title: 'Sanity Studio',
-                  name: '',
-                  apiId: ''
+                  name: 'ndrewgood-sanity-gatsby-studio',
+                  apiId: 'e3b27530-d48a-4354-a87c-7aefd8ddb477'
                 },
                 {
-                  buildHookId: '',
-                  title: 'Portfolio Website',
-                  name: '',
-                  apiId: ''
+                  buildHookId: '5f1b0b9986e8990851ca13c1',
+                  title: 'Live Site',
+                  name: 'ndrewgood-sanity-gatsby',
+                  apiId: '3fbb8c57-5a81-4656-bb52-a070e850239f'
                 }
               ]
             }
