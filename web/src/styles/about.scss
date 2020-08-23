@@ -128,3 +128,15 @@
     background-color: white;
 }
 
+@media only screen and (max-width: 800px) {
+    #a-ca {
+        flex-direction: column;
+    }
+    #a-p {
+        width: 75%;
+        margin: auto;
+    }
+    #a-d {
+        width: 100%;
+    }
+}

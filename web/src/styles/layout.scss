@@ -18,13 +18,13 @@ body {
 }
 
 .bar-white {
-    width: 800px;
+    max-width: 800px;
+    width: 90vw;
     margin: auto;
     margin-top: 8px;
     height: 1px;
     background-color: white;
     mix-blend-mode: exclusion;
-
 }
 
 .bar-small {

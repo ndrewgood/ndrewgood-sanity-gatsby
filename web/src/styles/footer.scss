@@ -98,6 +98,16 @@
     background-color: white;
 }
 
+@media only screen and (max-width: 800px){
+    .f-email {
+        font-size: 20px !important;
+    }
+    #f-l, #f-r {
+        bottom: 30px !important;
+    }
+
+}
+
 .showFooter {
     opacity: 1 !important;
     display: flex !important;

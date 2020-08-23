@@ -37,10 +37,12 @@ const projectHeader = (props) => {
                 <h2>{project.type}</h2>
               </div>
               <div className="tp-h-bh">
+              {project.date ?
                 <div className="tp-h-b">
                   <h3>Date</h3>
                   <h4>{project.date}</h4>
                 </div>
+                : null }
                 <div className="tp-h-b">
                   <h3>Tools</h3>
                   <h4>{project.tools.join(", ")}</h4>

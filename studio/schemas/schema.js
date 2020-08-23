@@ -20,6 +20,7 @@ import contentImage from './objects/contentImage'
 import imageText from './objects/imageText'
 import content from './objects/content'
 import contentBar from './objects/contentBar'
+import videoEmbed from './objects/videoEmbed'
 
 
 
@@ -42,6 +43,7 @@ export default createSchema({
     imageText,
     content,
     contentBar,
+    videoEmbed,
     // The following are document types which will appear
     // in the studio.
     project,

@@ -3,18 +3,31 @@ import BlockContent from '@sanity/block-content-to-react'
 
 import '../styles/temp-project.scss'
 
-// const serializers = {
-//     types: {
-//       content: props => (
+import getVideoId from 'get-video-id'
 
-//       )
-//     }
-// }
+
+const serializers = {
+    types: {
+        videoEmbed: ({node}) => {
+            const { url } = node
+            const id = getVideoId(url).id
+            const service = getVideoId(url).service
+        
+            const vimeoEmbedUrl = 'https://player.vimeo.com/video/' + id
+            const youtubeEmbedUrl = 'https://www.youtube.com/embed/' + id
+            return (
+                service === "vimeo" ?
+                <iframe src={vimeoEmbedUrl} width="800px" height="400px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                : null
+            )
+        }
+    }
+}
 
 
 const projectContent = (props) => {
 
-
+    
     return (
         <div className="tp-c">
             { props._rawBody ? props._rawBody.map((val, i) => {
@@ -23,6 +36,7 @@ const projectContent = (props) => {
                     return(
                         <BlockContent 
                         renderContainerOnSingleChild={true}
+                        serializers={serializers}
                         className="c-block c-text" 
                         blocks={val.text} />
                     )
