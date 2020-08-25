@@ -21,6 +21,7 @@ import imageText from './objects/imageText'
 import content from './objects/content'
 import contentBar from './objects/contentBar'
 import videoEmbed from './objects/videoEmbed'
+import muxVideo from './objects/muxVideo'
 
 
 
@@ -44,6 +45,7 @@ export default createSchema({
     content,
     contentBar,
     videoEmbed,
+    muxVideo,
     // The following are document types which will appear
     // in the studio.
     project,

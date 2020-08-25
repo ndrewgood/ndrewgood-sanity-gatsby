@@ -91,7 +91,8 @@ export default {
         {type: 'content'},
         {type: 'contentImage'},
         {type: 'imageText'},
-        {type: 'contentBar'}
+        {type: 'contentBar'},
+        {type: 'muxVideo'}
       ]
     }
   ],
