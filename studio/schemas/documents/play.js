@@ -87,7 +87,7 @@ export default {
         {type: 'contentImage'},
         {type: 'imageText'},
         {type: 'contentBar'},
-        {type: 'muxVideo'}
+        {type: 'driveVideo'}
       ]
     }
   ],

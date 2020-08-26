@@ -61,6 +61,16 @@ const projectContent = (props) => {
                                 dataset="production"
                             />
                         )
+                    } else if (val.size == "auto"){
+                        return (
+                            <BlockContent
+                                blocks={val.image}
+                                renderContainerOnSingleChild={true}
+                                className="c-image-auto"
+                                projectId="wvk3aqii"
+                                dataset="production"
+                            />
+                        )
                     }
                 } else if (val._type == "imageText") {
                     if (val.layout == "image-left") {
@@ -102,11 +112,19 @@ const projectContent = (props) => {
                     return (
                         <div className="c-block c-bar"></div>
                     )
+                } else if (val._type == "driveVideo") {
+                    return (
+                        <video className="c-block" loop autoPlay muted>
+                            <source src={val.url} type='video/mp4' />
+                        </video>
+                    )
                 }
             }) : null
             }
         </div>
     )
 }
+
+
 
 export default projectContent

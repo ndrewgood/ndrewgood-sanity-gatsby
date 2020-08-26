@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, rmdir '/Users/owner/Desktop/repos/ndrewgood-sanity-gatsby/studio/node_modules/.cache/babel-loader'
+  Error: EACCES: permission denied, unlink '/Users/owner/Desktop/repos/ndrewgood-sanity-gatsby/studio/node_modules/.bin/async-node'
 
 npm manifest: 
   {
@@ -44,6 +44,7 @@ npm manifest:
       "prop-types": "^15.7.2",
       "react": "^16.13.1",
       "react-dom": "^16.13.1",
+      "sanity-mux-player": "0.0.26",
       "sanity-plugin-dashboard-widget-document-list": "^0.0.8",
       "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
     },
@@ -4740,6 +4741,13 @@ Lockfile:
       tiny-warning "^1.0.0"
       value-equal "^1.0.1"
   
+  hls.js@^0.11.0:
+    version "0.11.0"
+    resolved "https://registry.npmjs.org/hls.js/-/hls.js-0.11.0.tgz#a205fb61725d9d69bf6258984be3dc2ee829fa9e"
+    dependencies:
+      string.prototype.endswith "^0.2.0"
+      url-toolkit "^2.1.2"
+  
   hmac-drbg@^1.0.0:
     version "1.0.1"
     resolved "https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -7984,6 +7992,14 @@ Lockfile:
     version "0.1.1"
     resolved "https://registry.npmjs.org/same-origin/-/same-origin-0.1.1.tgz#c2287d3192577df517acbbd6d1451a9c3c3914f5"
   
+  sanity-mux-player@0.0.26:
+    version "0.0.26"
+    resolved "https://registry.npmjs.org/sanity-mux-player/-/sanity-mux-player-0.0.26.tgz#beb43fbe899f491d0801c9b9b27ba614709f5fe6"
+    dependencies:
+      hls.js "^0.11.0"
+      lodash "^4.17.11"
+      prop-types "^15.6.0"
+  
   sanity-plugin-dashboard-widget-document-list@^0.0.8:
     version "0.0.8"
     resolved "https://registry.npmjs.org/sanity-plugin-dashboard-widget-document-list/-/sanity-plugin-dashboard-widget-document-list-0.0.8.tgz#6b30187df9834af41fae415859aeba2d65db6b2f"
@@ -8416,6 +8432,10 @@ Lockfile:
       emoji-regex "^7.0.1"
       is-fullwidth-code-point "^2.0.0"
       strip-ansi "^5.1.0"
+  
+  string.prototype.endswith@^0.2.0:
+    version "0.2.0"
+    resolved "https://registry.npmjs.org/string.prototype.endswith/-/string.prototype.endswith-0.2.0.tgz#a19c20dee51a98777e9a47e10f09be393b9bba75"
   
   string.prototype.matchall@^4.0.2:
     version "4.0.2"
@@ -8927,6 +8947,10 @@ Lockfile:
     dependencies:
       querystringify "^2.1.1"
       requires-port "^1.0.0"
+  
+  url-toolkit@^2.1.2:
+    version "2.2.0"
+    resolved "https://registry.npmjs.org/url-toolkit/-/url-toolkit-2.2.0.tgz#9a57b89f315d4b7dc340e150bcfa548ddf5f5ce9"
   
   url@^0.11.0:
     version "0.11.0"

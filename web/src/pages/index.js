@@ -105,7 +105,7 @@ const IndexPage = props => {
 
   return (
     <div>
-      <Helmet title={indexTitle} />
+      <Helmet title={indexTitle} site={site}/>
       <Hero />
       <div id="work">
           { projectNodes.edges.map(({ node }) => ( 
