@@ -170,6 +170,11 @@
 
 }
 
+@media only screen and (min-width: 800px) {
+    #f-c-mobile {
+        display: none !important;
+    }
+}
 
 .showFooter {
     opacity: 1 !important;
