@@ -102,7 +102,7 @@
 }
 
 #f-c-mobile {
-    display: none !important;
+    display: none;
     flex-direction: column;
     width: 90vw;
     margin: auto;
@@ -163,10 +163,6 @@
 @media only screen and (max-width: 800px){
     #f {
         height: 550px;
-    }
-
-    #f-c-mobile {
-        display: flex !important;
     }
     #f-l, #f-r {
         bottom: 30px !important;

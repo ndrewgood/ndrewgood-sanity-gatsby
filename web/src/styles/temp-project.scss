@@ -179,6 +179,10 @@
         font-size: 1.2em;
         margin-block-end: .5em;
     }
+    iframe {
+        max-width: 800px !important;
+        width: 90vw !important;
+    }
 }
 
 video {

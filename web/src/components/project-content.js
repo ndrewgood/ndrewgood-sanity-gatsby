@@ -114,7 +114,7 @@ const projectContent = (props) => {
                     )
                 } else if (val._type == "driveVideo") {
                     return (
-                        <video className="c-block" loop autoPlay muted>
+                        <video className="c-block" loop autoPlay muted playsInline>
                             <source src={val.url} type='video/mp4' />
                         </video>
                     )
