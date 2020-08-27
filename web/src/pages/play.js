@@ -7,6 +7,7 @@ import ProjectSmall from '../components/project-small'
 
 
 
+
 import '../styles/play.scss'
 import '../styles/layout.scss'
 import '../styles/project.scss'

@@ -63,7 +63,7 @@ const projectHeader = (props) => {
                       project.links.map((v, i) => {
                         return (
                           <a target="_blank" href={v.url} className={v.important ? "l l-i" : "l"}>
-                            <div className="link-c">
+                            <div className="link-c link-c-project">
                               <h4>{v.name}</h4>
                               <div className="arrow pt-a"></div>
                             </div>
