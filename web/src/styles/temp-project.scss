@@ -254,11 +254,6 @@ video {
 .c-it-text {
     width: 50%;
     padding-left: 10px;
-    p {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
 }
 
 .c-bar {
@@ -278,6 +273,17 @@ video {
     }
     .c-it-image, .c-it-text {
         width: 100%;
+    }
+    .link-c {
+        padding: 12px 0;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .c-it-text p {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 

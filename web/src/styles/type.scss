@@ -43,3 +43,13 @@ p {
     width: 14px;
     margin-top: 4px;
 }
+
+::-moz-selection { /* Code for Firefox */
+    color: red;
+    background: yellow;
+  }
+  
+  ::selection {
+    background: #bb1337f6;
+    color: white;
+  }
