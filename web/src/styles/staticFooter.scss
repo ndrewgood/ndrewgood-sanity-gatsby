@@ -1,0 +1,25 @@
+.sf-bg {
+    background-color: #171785;
+    height: 300px;
+    padding-top: 40px;
+}
+
+.sf {
+    margin: auto;
+    max-width: 800px;
+    width: 90vw;
+}
+
+.sf-bar {
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+    .sf-bg {
+        padding-top: 10px;
+        height: 550px;
+    }
+    .sf-bar {
+        display: none;
+    }
+}

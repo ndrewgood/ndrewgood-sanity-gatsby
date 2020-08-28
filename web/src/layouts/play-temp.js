@@ -9,6 +9,7 @@ import Transition from '../components/transition'
 import ProjectHeader from '../components/project-header'
 import ProjectContent from '../components/project-content'
 import Footer from '../components/footer'
+import StaticFooter from '../components/staticFooter'
 
 
 import '../styles/layout.scss'
@@ -95,7 +96,8 @@ const PlayTemplate = props => {
           </div>
           <ProjectContent {...play} />
         </div>
-        <Footer showFoot={"showFooter"}/>
+        {/* <Footer showFoot={"showFooter"}/> */}
+        <StaticFooter />
       </Transition>
   )
 }

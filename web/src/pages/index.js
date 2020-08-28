@@ -9,6 +9,7 @@ import HeroTwo from '../components/hero2'
 import ProjectLarge from '../components/project-large'
 import ProjectSmall from '../components/project-small'
 import Footer from '../components/footer'
+import StaticFooter from '../components/staticFooter'
 
 import '../styles/project.scss'
 
@@ -123,7 +124,8 @@ const IndexPage = props => {
             }
           </div>
       </div>
-      <Footer showFoot={showFooter} />
+      {/* <Footer showFoot={showFooter} /> */}
+      <StaticFooter />
     </div>
   )
 }
