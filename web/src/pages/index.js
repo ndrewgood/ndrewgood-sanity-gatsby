@@ -5,7 +5,6 @@ import {Helmet} from 'react-helmet'
 import { MenuContext } from '../components/context'
 
 import Hero from '../components/hero'
-import HeroTwo from '../components/hero2'
 import ProjectLarge from '../components/project-large'
 import ProjectSmall from '../components/project-small'
 import Footer from '../components/footer'
