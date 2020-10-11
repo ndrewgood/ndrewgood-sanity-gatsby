@@ -110,7 +110,7 @@ const IndexPage = props => {
       <div id="work">
           { projectNodes.edges.map(({ node }) => ( 
               node.featured 
-              ? <ProjectLarge  {...node} /> 
+              ? <ProjectLarge spooky={true} {...node} /> 
               : null
             ))
           }
@@ -118,7 +118,7 @@ const IndexPage = props => {
             { projectNodes.edges.map(({ node }) => ( 
                 node.featured 
                 ? null
-                : <ProjectSmall {...node} />
+                : <ProjectSmall spooky={true} {...node} />
               ))
             }
           </div>

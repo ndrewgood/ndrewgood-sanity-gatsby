@@ -20,9 +20,10 @@ const projectSmall = (props) => {
   }
 
   const slug = "/" + props.slug.current
+  const spookySlug = "../" + props.slug.current
 
   return(
-    <Link to={slug} id={props.id} style={pStyle} className="p">
+    <Link to={props.spooky ? spookySlug : slug} id={props.id} style={pStyle} className="p">
       <div className="p-i" style={piStyle}></div>
       <div className="bar-small"></div>
       <div className="p-tc">

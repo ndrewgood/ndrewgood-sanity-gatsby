@@ -30,6 +30,7 @@
 #n-m {
     width: 250px;
     justify-content: space-between;
+    transition: .3s;
     li {
         a {
             color: #a5a5a5;
@@ -38,10 +39,15 @@
         a:hover {
             color: white;
         }
+        transition: .3s;
     }
 
 }
 
 .active {
     color: white !important;
+}
+
+.spookyActive{
+    display: none;
 }

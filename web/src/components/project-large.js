@@ -20,9 +20,11 @@ const projectLarge = (props) => {
     'height': '400px'
   }
 
+  const slug = "/" + props.slug.current
+  const spookySlug = "../" + props.slug.current
 
   return(
-    <Link to={props.slug.current} id={props.id} style={pStyle} className="p">
+    <Link to={props.spooky ? spookySlug : slug} id={props.id} style={pStyle} className="p">
       <div className="p-i" style={piStyle}></div>
       <div className="bar"></div>
       <div className="p-tc">
