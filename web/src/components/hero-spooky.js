@@ -9,7 +9,7 @@ let windowWidth;
 
 const hero = () => {
   const data = useStaticQuery(graphql`
-    query heroQuery {
+    query SpookyHeroQuery {
       site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
         title
         description
@@ -21,15 +21,14 @@ const hero = () => {
 
   const [loading, setLoading] = useState("");
 
-  const style = {
-    backgroundColor: "#b4193a"
-  }
-
+    const style = {
+      backgroundColor: "#161616"
+    }
 
   return(
     <div id="h" style={style}>
-        <Three setLoad={setLoading} animate={true} control={false}/>
-        <h3 class={loading}>Loading...</h3>
+        <ThreeSpooky setLoad={setLoading} animate={true} control={false}/>
+        <h3 class={loading}>👻Loading...👻</h3>
         <h2>Hi, my name is Andrew Goodridge.<br></br> I'm a UX designer and front-end developer studying at SCAD.</h2>
     </div>
   )
