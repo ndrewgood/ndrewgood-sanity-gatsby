@@ -25,8 +25,8 @@ const nav = (props) => {
           <li><AnchorLink to={`/${work}`} className={activeLink == "work" ? "active" : null }><span>Work</span></AnchorLink></li>
           <li><Link to={`/${play}`} className = {activeLink == "play" ? "active" : null }>Play</Link></li>
           <li><Link to={`/${about}`} className = {activeLink == "about" ? "active" : null }>About</Link></li>
-          <li><Link target="_blank" to="https://drive.google.com/file/d/1hedDYHO_GEmSBACdtMXm7qxKt8h1oOml/view?usp=sharing">Resume</Link></li>
-          <li className={activeLink == "about" || activeLink == "play" || activeLink == "work" ? "spookyActive" : null}><Link to="/👻">👻</Link></li>
+          <li><Link target="_blank" to="https://drive.google.com/file/d/1eMstMnz-fZlQboNRAKGX0YGS-CD_tgLT/view?usp=sharing">Resume</Link></li>
+          {/* <li className={activeLink == "about" || activeLink == "play" || activeLink == "work" ? "spookyActive" : null}><Link to="/👻">👻</Link></li> */}
         </div>
       </ul>
   </nav>
