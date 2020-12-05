@@ -36,16 +36,3 @@ const projectLarge = (props) => {
 }
 
 export default projectLarge
-
-
-// return(
-//   <div id={props.node.id} className="p" style={pStyle}>
-//     <div className="p-t">
-//      <Link to={props.node.slug.current}><div className="p-tc" style={ptcStyle}>
-//         <h1>{props.node.title}</h1>
-//         <h2>{props.node.type}</h2>
-//       </div></Link>
-//     </div>
-//     <Link to={props.node.slug.current}><div className="p-i"></div></Link>
-//   </div>
-// )

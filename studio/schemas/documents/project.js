@@ -77,17 +77,7 @@ export default {
     {
       name: 'date',
       title: 'Date',
-      type: 'date',
-      description: 'Date project was started',
-      options: {
-        dateFormat: 'MMM, YYYY'
-      }
-    },
-    {
-      name: 'duration',
-      title: 'Duration',
-      type: 'string',
-      description: 'Duration of project'
+      type: 'string'
     },
     {
       name: 'thumbImg',

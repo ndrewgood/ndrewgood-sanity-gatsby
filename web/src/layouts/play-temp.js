@@ -20,7 +20,7 @@ export const query = graphql`
   query playTempPageQuery($slug: String!) {
     play: sanityPlay(slug: {current: {eq: $slug}}) {
         color
-        date(formatString: "MMMM YYYY")
+        date
         id
         title
         type

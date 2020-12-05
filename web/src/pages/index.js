@@ -40,7 +40,7 @@ export const query = graphql`
           slug {
             current
           }
-          date(formatString: "MMMM YYYY")
+          date
           duration
           thumbImg {
             asset {

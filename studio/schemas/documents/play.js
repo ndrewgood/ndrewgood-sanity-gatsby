@@ -67,11 +67,7 @@ export default {
     {
       name: 'date',
       title: 'Date',
-      type: 'date',
-      description: 'Date project was finished',
-      options: {
-        dateFormat: 'MMM, YYYY'
-      }
+      type: 'string'
     },
     {
       name: 'thumbImg',

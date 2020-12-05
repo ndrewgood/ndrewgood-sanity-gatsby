@@ -21,7 +21,7 @@ export const query = graphql`
   query projectTempPageQuery($slug: String!) {
     project: sanityProject(slug: {current: {eq: $slug}}) {
         color
-        date(formatString: "MMMM YYYY")
+        date
         id
         title
         type
