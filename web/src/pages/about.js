@@ -73,7 +73,7 @@ const About = props => {
             <div id="af-l">
               <p>Feel free to email or DM me on any of my socials. Lets make something happen :-)</p>
               <a className="f-email" target="_blank" href="mailto:hey@ndrewgood.com">hey@ndrewgood.com</a>
-              <p className="f-code">Website made with ❤️... and code. more info <a target="_blank" href="https://github.com/ndrewgood/ndrewgood-sanity-gatsby">here</a>.</p>
+              <p className="f-code">Website made with ❤️... and <a target="_blank" href="https://github.com/ndrewgood/ndrewgood-sanity-gatsby">code</a>.</p>
             </div>
             <div id="af-r">
               <ul>
@@ -131,7 +131,7 @@ const About = props => {
               <div className="f-bar"></div>
               <p className="f-desc">Feel free to email or DM me on any of my socials. Lets make something happen :-)</p>
               <a className="f-email" target="_blank" href="mailto:hey@ndrewgood.com">hey@ndrewgood.com</a>
-              <p className="f-code">Website made with ❤️... and code. more info <a target="_blank" href="https://github.com/ndrewgood/ndrewgood-sanity-gatsby">here</a>.</p>
+              <p className="f-code">Website made with ❤️... and <a target="_blank" href="https://github.com/ndrewgood/ndrewgood-sanity-gatsby">code</a>.</p>
               <ul>
                 <Link to="https://www.instagram.com/ndrewgood/">
                   <li>

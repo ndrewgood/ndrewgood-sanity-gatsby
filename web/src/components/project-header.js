@@ -5,23 +5,30 @@ import '../styles/temp-project.scss'
 
 const projectCollab = (props) => {
   const project = props
+  console.log("length: " + project.collaborators.length);
 
   return (
-    <div className="tp-h-b tp-collab">
-      <h3>Collaborators</h3>
-      <h4>
-      {
-        project.collaborators.map((v, i) => {
-            return (
-              <Fragment>
-                <a target="_blank" href={v.portfolio}>{v.name}</a> 
-                {project.collaborators.length - i !== 1 ? ", " : null}
-              </Fragment>
-            )
-          })
-        }
-      </h4>
-    </div>
+    <>
+      { 
+      project.collaborators.length !== 0 ?
+        <div className="tp-h-b tp-collab">
+          <h3>Collaborators</h3>
+          <h4>
+          {
+            project.collaborators.map((v, i) => {
+                return (
+                  <Fragment>
+                    <a target="_blank" href={v.portfolio}>{v.name}</a> 
+                    {project.collaborators.length - i !== 1 ? ", " : null}
+                  </Fragment>
+                )
+              })
+            }
+          </h4>
+        </div>
+      : null 
+    }
+  </>
   )
 }
 
@@ -56,6 +63,7 @@ const projectHeader = (props) => {
               </div>
               <div className="tp-h-bv">
                 { project._rawCollaborators !== null ? projectCollab(project) : null }
+                {project.links.length !== 0 ? 
                 <div className="tp-h-b">
                   <h3>Links</h3>
                   <div className="tp-h-ls">
@@ -74,6 +82,7 @@ const projectHeader = (props) => {
                     }
                   </div>
                 </div>
+                : null}
               </div>
             </div>
     )
