@@ -41,7 +41,6 @@ export const query = graphql`
             current
           }
           date
-          duration
           thumbImg {
             asset {
               url

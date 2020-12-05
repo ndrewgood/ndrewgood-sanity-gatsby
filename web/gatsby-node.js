@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     slug {
                     current
                     }
-                    date(formatString: "MMMM YYYY")
+                    date
                 }
             }
         }
@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
                   slug {
                   current
                   }
-                  date(formatString: "MMMM YYYY")
+                  date
               }
           }
       }
