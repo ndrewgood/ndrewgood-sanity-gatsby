@@ -6,6 +6,11 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'displayed',
+      title: 'Displayed',
+      type: 'boolean'
+    },
+    {
       name: 'order',
       title: 'Order',
       type: 'number'
@@ -73,10 +78,16 @@ export default {
       name: 'date',
       title: 'Date',
       type: 'date',
-      description: 'Date project was finished',
+      description: 'Date project was started',
       options: {
         dateFormat: 'MMM, YYYY'
       }
+    },
+    {
+      name: 'duration',
+      title: 'Duration',
+      type: 'string',
+      description: 'Duration of project'
     },
     {
       name: 'thumbImg',

@@ -32,6 +32,7 @@ export const query = graphql`
         node {
           title
           order
+          displayed
           featured
           type
           color
@@ -40,6 +41,7 @@ export const query = graphql`
             current
           }
           date(formatString: "MMMM YYYY")
+          duration
           thumbImg {
             asset {
               url
@@ -109,14 +111,14 @@ const IndexPage = props => {
       <Hero />
       <div id="work">
           { projectNodes.edges.map(({ node }) => ( 
-              node.featured 
+              node.featured && node.displayed
               ? <ProjectLarge  {...node} /> 
               : null
             ))
           }
           <div id="p-g">
             { projectNodes.edges.map(({ node }) => ( 
-                node.featured 
+                node.featured || !node.displayed
                 ? null
                 : <ProjectSmall {...node} />
               ))
