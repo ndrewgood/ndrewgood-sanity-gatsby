@@ -31,7 +31,7 @@ const three = (props) => {
   const [canvClass, setCanvClass] = useState("useThree");
 
 
-  console.log("windowWidth: " + props.windowWidth);
+  // console.log("windowWidth: " + props.windowWidth);
 
   let cameraSettings = {
     fov: 40,

@@ -31,7 +31,7 @@ const projectContent = (props) => {
     return (
         <div className="tp-c">
             { props._rawBody ? props._rawBody.map((val, i) => {
-                console.log(i + ": "+ val._type);
+                // console.log(i + ": "+ val._type);
                 if (val._type == "content") {
                     return(
                         <BlockContent 

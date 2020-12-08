@@ -5,7 +5,7 @@ import '../styles/temp-project.scss'
 
 const projectCollab = (props) => {
   const project = props
-  console.log("length: " + project.collaborators.length);
+  // console.log("length: " + project.collaborators.length);
 
   return (
     <>

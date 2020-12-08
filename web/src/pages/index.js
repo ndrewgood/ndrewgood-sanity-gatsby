@@ -69,15 +69,16 @@ const IndexPage = props => {
 
   useEffect(() => {
     contextData.setActiveLink("none")
-    console.log("index effect triggered");
+    // console.log("index effect triggered");
     window.addEventListener('scroll', handleScroll);
     showFooter = "null"
     window.scrollY >= 1000 ? showFooter = "showFooter" : "null"
     window.scrollY <= 1000 ? showFooter = "null" : "showFooter"
+    
 
 
     return () => {
-      console.log("index effect deactivated");
+      // console.log("index effect deactivated");
       window.removeEventListener('scroll', handleScroll);
       showFooter = "null"
     }
@@ -98,7 +99,7 @@ const IndexPage = props => {
     lastScrollY < heroHeight ? showFooter = "showFooter" : "null"
     lastScrollY >= heroHeight ? showFooter = "null" : "showFooter"
     
-    console.log(showFooter)
+    // console.log(showFooter)
 
 
   }

@@ -63,7 +63,7 @@ const Play = props => {
 
   useEffect(() => {
     contextData.setActiveLink("play")
-    console.log("play effect triggered");
+    // console.log("play effect triggered");
   }, []);
 
 

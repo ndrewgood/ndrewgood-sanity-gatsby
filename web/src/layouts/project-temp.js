@@ -69,7 +69,7 @@ const ProjectTemplate = props => {
   useEffect(() => {
     setTimeout(() => {
       contextData.setActiveLink("work");
-      console.log("set work?")
+      // console.log("set work?")
     }, 500);
 
   }, []);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Transition from '../components/transition'
 import Navigation from '../components/nav'
@@ -19,10 +19,16 @@ const Template = (props) => {
 
   const data = {
       activeLink: activeLink,
-      setActiveLink: (p) => {setActiveLink(p); console.log("from data: " + activeLink)}
+      setActiveLink: (p) => {setActiveLink(p)}
   }
 
+  useEffect(() => {
+    console.log("👀 I see we have a sneaky visiter... 👀");
+    console.log("🙏 But fr, thanks for checking out my website and being interested in how it works! 🙏");
+    console.log("⭐️ Github link is in the footer, but if you're at all interested in what I do, feel free to reach out! I promise I don't bite... ⭐️");  
+  }, []);
 
+ 
   return (
     <MenuContext.Provider value={data}>
       <div id="c">

@@ -40,7 +40,7 @@ const About = props => {
 
   useEffect(() => {
     contextData.setActiveLink("about")
-    console.log("about effect triggered");
+    // console.log("about effect triggered");
 
   }, []);
 
