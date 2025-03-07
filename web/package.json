@@ -16,24 +16,23 @@
     "@sanity/image-url": "^0.140.18",
     "date-fns": "^1.30.1",
     "dont-go": "^1.1.1",
-    "drei": "0.0.70",
     "gatsby": "^2.24.29",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-anchor-links": "^1.1.1",
-    "gatsby-plugin-google-gtag": "^3.4.0",
+    "gatsby-plugin-google-gtag": "^2.8.0",
     "gatsby-plugin-layout": "^1.3.10",
     "gatsby-plugin-postcss": "^2.0.7",
     "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-plugin-sass": "^3.2.0",
     "gatsby-source-sanity": "^4.0.1",
-    "node-sass": "^4.14.1",
+    "sass": "^1.71.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.0",
-    "react-spring": "^8.0.27",
-    "react-three-fiber": "^4.2.18",
+    "react-three-fiber": "4.2.21",
     "react-transition-group": "^4.4.1",
-    "three": "^0.119.1"
+    "three": "0.125.0",
+    "get-video-id": "^3.6.5"
   },
   "devDependencies": {
     "dotenv": "^8.0.0",
@@ -49,5 +48,11 @@
     "postcss-preset-env": "^6.6.0",
     "prettier-eslint-cli": "^4.7.1",
     "rimraf": "^2.6.3"
+  },
+  "resolutions": {
+    "three": "0.125.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-three-fiber": "4.2.21"
   }
 }

@@ -1,8 +1,59 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import { Canvas, useFrame, useThree } from "react-three-fiber";
-import { OrbitControls, Sphere, Stars, Box } from 'drei';
+import { OrbitControls as ThreeOrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 let heroFov;
+
+// Custom OrbitControls component
+const OrbitControls = () => {
+  const { camera, gl } = useThree()
+  const controls = useRef()
+  
+  useFrame(() => {
+    controls.current.update()
+  })
+  
+  return <primitive object={new ThreeOrbitControls(camera, gl.domElement)} ref={controls} />
+}
+
+// Custom Sphere component
+const Sphere = ({ args, children, ...props }) => {
+  return (
+    <mesh {...props}>
+      <sphereBufferGeometry attach="geometry" args={args} />
+      {children}
+    </mesh>
+  )
+}
+
+// Custom Stars component
+const Stars = ({ count = 5000, radius = 80 }) => {
+  const positions = new Float32Array(count * 3)
+  
+  for(let i = 0; i < count; i++) {
+    const i3 = i * 3
+    const r = radius * Math.cbrt(Math.random())
+    const theta = Math.random() * 2 * Math.PI
+    const phi = Math.acos(2 * Math.random() - 1)
+    positions[i3] = r * Math.sin(phi) * Math.cos(theta)
+    positions[i3 + 1] = r * Math.sin(phi) * Math.sin(theta)
+    positions[i3 + 2] = r * Math.cos(phi)
+  }
+
+  return (
+    <points>
+      <bufferGeometry attach="geometry">
+        <bufferAttribute
+          attachObject={['attributes', 'position']}
+          count={positions.length / 3}
+          array={positions}
+          itemSize={3}
+        />
+      </bufferGeometry>
+      <pointsMaterial attach="material" size={0.1} sizeAttenuation color="white" />
+    </points>
+  )
+}
 
 const Dolly = () => {
   const { camera } = useThree(); 
@@ -23,7 +74,6 @@ const Dolly = () => {
     
   return null
 }
-
 
 const three = (props) => {
 

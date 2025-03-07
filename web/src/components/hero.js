@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 
 import Three from './three/hero-three'
-import ThreeSpooky from './three/hero-three-spooky'
 import '../styles/hero.scss'
 
 let windowWidth;
